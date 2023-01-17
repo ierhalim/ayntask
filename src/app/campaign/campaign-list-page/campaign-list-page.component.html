@@ -9,10 +9,6 @@
         <div class="ayn-toolbar">
             <div class="ayn-toolbar-section ayn-toolbar-section-start">
                 <!--TODO: A new component for tabs.-->
-                <ul>
-                    <li>Campaigns<i class="fa-solid fa-rocket"></i></li>
-                    <li>Drafts<i class="fa-regular fa-floppy-disk"></i></li>
-                </ul>
             </div>
             <div class="ayn-toolbar-section ayn-toolbar-section-end">
                 <select [value]="-30" class="ayn-select ayn-select-rounded">
@@ -26,7 +22,8 @@
     <div class="ayn-panel-body">
         <!--TODO Child component or child route-->
         <ayn-table [value]="pageModel.items" aynTablePager [totalDataCount]="pageModel.totalDataCount"
-            [(currentPage)]="tableStatus.currentPage" (currentPageChange)="loadCampaigns()" aynTableSelectable [selectedItems]="selectedCampaigns">
+            [(currentPage)]="tableStatus.currentPage" (currentPageChange)="loadCampaigns()" aynTableSelectable
+            [selectedItems]="selectedCampaigns">
             <ng-container tableToolbar>
                 <div class="ayn-toolbar">
                     <div class="ayn-toolbar-section ayn-toolbar-section-start">
@@ -34,11 +31,13 @@
                             Create New Campaign
                             <i class="fa-solid fa-plus"></i>
                         </button>
-                        <button class="ayn-button ayn-button-outline ayn-button-success ayn-button-rounded" (click)="activateSelecteds()">
+                        <button class="ayn-button ayn-button-outline ayn-button-success ayn-button-rounded"
+                            (click)="activateSelecteds()">
                             Turn On
                             <i class="fa-solid fa-play"></i>
                         </button>
-                        <button class="ayn-button ayn-button-outline ayn-button-warning ayn-button-rounded" (click)="pauseSelecteds()">
+                        <button class="ayn-button ayn-button-outline ayn-button-warning ayn-button-rounded"
+                            (click)="pauseSelecteds()">
                             Turn Of
                             <i class="fa-solid fa-pause"></i>
                         </button>
@@ -99,7 +98,9 @@
                         {{item.name}}
                     </td>
                     <td class="text-center">
-                        DETAIL BUTTON
+                        <button class="ayn-button ayn-button-primary ayn-button-sm">
+                            <i class="fa-solid fa-chart-simple"></i>
+                        </button>
                     </td>
                     <td class="text-center">
                         <div>
