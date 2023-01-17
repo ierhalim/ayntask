@@ -6,9 +6,7 @@
 
 <div class="ayn-panel">
     <div class="ayn-panel-header">
-
         <div class="ayn-toolbar">
-
             <div class="ayn-toolbar-section ayn-toolbar-section-start">
                 <!--TODO: A new component for tabs.-->
                 <ul>
@@ -16,7 +14,6 @@
                     <li>Drafts<i class="fa-regular fa-floppy-disk"></i></li>
                 </ul>
             </div>
-
             <div class="ayn-toolbar-section ayn-toolbar-section-end">
                 <select [value]="-30" class="ayn-select ayn-select-rounded">
                     <option value="-3">Last 3 Day</option>
@@ -24,7 +21,6 @@
                     <option value="-30">Last 30 Day</option>
                 </select>
             </div>
-
         </div>
     </div>
     <div class="ayn-panel-body">
@@ -52,8 +48,7 @@
                 </span>
             </div>
         </div>
-
-        <ayn-table [value]="[1]">
+        <ayn-table [value]="pageModel.items">
             <ng-container tableHead>
                 <tr>
                     <th>Type</th>
@@ -76,7 +71,7 @@
                 </tr>
             </ng-container>
 
-            <ng-template let-item>
+            <ng-template let-item="item">
                 <tr>
                     <td>
                         <span class="ayn-tag">
@@ -91,35 +86,36 @@
                         TOGGLE SWITCH
                     </td>
                     <td class="text-center">
-                        NAME
+                        {{item.name}}
                     </td>
                     <td class="text-center">
                         DETAIL BUTTON
                     </td>
                     <td class="text-center">
                         <div>
-                            BUDGET
+                            {{item.budgetMicros}}
                         </div>
-                        <div>BUDGET TYPE</div>
+                        <div>{{item.budgetPeriod}}</div>
                     </td>
                     <td class="text-center">
-                        <div>START</div>
-                        <div>END</div>
+                        <div>{{item.startDate | date: 'dd MMM yyyy'}}</div>
+                        <div>{{item.endDate | date: 'dd MMM yyyy'}}</div>
                     </td>
                     <td class="text-center">
-                        RESULT
+                        {{item.result}}
                     </td>
                     <td class="text-center">
-                        IMPRESSION
+                        {{item.impressions}}
                     </td>
                     <td class="text-center">
-                        CLICKS
+                        {{item.clicks}}
                     </td>
                     <td class="text-center">
-                        CPC
+                        {{item.averageCpc}}
                     </td>
                     <td class="text-center">
-                        SPEND </td>
+                        {{item.spend}}
+                    </td>
                     <td class="text-center">
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </td>

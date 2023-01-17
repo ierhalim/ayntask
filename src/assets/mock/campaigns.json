@@ -1,0 +1,925 @@
+{
+    "totalDataCount": 20,
+    "items": [
+      {
+        "campaign": {
+          "resourceName": "customers/1481414841/campaigns/9328791290",
+          "status": "ACTIVE",
+          "networkSettings": {
+            "targetGoogleSearch": true,
+            "targetSearchNetwork": true,
+            "targetContentNetwork": false,
+            "targetPartnerSearchNetwork": false
+          },
+          "name": "French Search Ads",
+          "campaignGroupId": "9328791290",
+          "id": "9328791290",
+          "campaignBudget": "customers/1481414841/campaignBudgets/6809377679",
+          "startDate": "2020-02-12",
+          "endDate": "2037-12-30",
+          "campaignBudgetDetail": {
+            "campaign": {
+              "resourceName": "customers/1481414841/campaigns/9328791290",
+              "id": "9328791290"
+            },
+            "campaignBudget": {
+              "resourceName": "customers/1481414841/campaignBudgets/6809377679",
+              "period": "DAILY",
+              "id": "6809377679",
+              "amountMicros": "50000000",
+              "currency": "EUR"
+            }
+          },
+          "campaignDeviceList": [
+            "DESKTOP",
+            "MOBILE",
+            "TABLET"
+          ]
+        },
+        "metrics": {
+          "clicks": "475",
+          "conversions": 32,
+          "costMicros": "913020000",
+          "costPerConversion": 26077500,
+          "ctr": 0.03341540626099191,
+          "allConversions": 35,
+          "averageCpc": 1922147.3684210526,
+          "impressions": "14215"
+        }
+      },
+      {
+        "campaign": {
+          "resourceName": "customers/1481414841/campaigns/9335535322",
+          "status": "PAUSED",
+          "networkSettings": {
+            "targetGoogleSearch": true,
+            "targetSearchNetwork": true,
+            "targetContentNetwork": false,
+            "targetPartnerSearchNetwork": false
+          },
+          "name": "English Search Ads",
+          "campaignGroupId": "9328791290",
+          "id": "9335535322",
+          "campaignBudget": "customers/1481414841/campaignBudgets/6809347373",
+          "startDate": "2020-02-12",
+          "endDate": "2037-12-30",
+          "campaignBudgetDetail": {
+            "campaign": {
+              "resourceName": "customers/1481414841/campaigns/9335535322",
+              "id": "9335535322"
+            },
+            "campaignBudget": {
+              "resourceName": "customers/1481414841/campaignBudgets/6809347373",
+              "period": "DAILY",
+              "id": "6809347373",
+              "amountMicros": "10000000",
+              "currency": "USD"
+            }
+          },
+          "campaignDeviceList": [
+            "DESKTOP",
+            "MOBILE",
+            "TABLET"
+          ]
+        },
+        "metrics": {
+          "clicks": "151",
+          "conversions": 4,
+          "costMicros": "373011188",
+          "costPerConversion": 80820000,
+          "ctr": 0.027660743725957136,
+          "allConversions": 6,
+          "averageCpc": 2470272.7682119207,
+          "impressions": "5459"
+        }
+      },
+      {
+        "campaign": {
+          "resourceName": "customers/1481414841/campaigns/9328791290",
+          "status": "ACTIVE",
+          "networkSettings": {
+            "targetGoogleSearch": true,
+            "targetSearchNetwork": true,
+            "targetContentNetwork": false,
+            "targetPartnerSearchNetwork": false
+          },
+          "name": "Turkish Search Ads",
+          "campaignGroupId": "9328791290",
+          "id": "9328791299",
+          "campaignBudget": "customers/1481414841/campaignBudgets/6809377679",
+          "startDate": "2020-02-12",
+          "endDate": "2037-12-30",
+          "campaignBudgetDetail": {
+            "campaign": {
+              "resourceName": "customers/1481414841/campaigns/9328791290",
+              "id": "9328791290"
+            },
+            "campaignBudget": {
+              "resourceName": "customers/1481414841/campaignBudgets/6809377679",
+              "period": "DAILY",
+              "id": "6809377679",
+              "amountMicros": "50000000",
+              "currency": "TRY"
+            }
+          },
+          "campaignDeviceList": [
+            "DESKTOP",
+            "MOBILE",
+            "TABLET"
+          ]
+        },
+        "metrics": {
+          "clicks": "475",
+          "conversions": 32,
+          "costMicros": "913020000",
+          "costPerConversion": 26077500,
+          "ctr": 0.03341540626099191,
+          "allConversions": 35,
+          "averageCpc": 1922147.3684210526,
+          "impressions": "14215"
+        }
+      },
+      {
+        "campaign": {
+          "resourceName": "customers/1481414841/campaigns/9335535322",
+          "status": "PAUSED",
+          "networkSettings": {
+            "targetGoogleSearch": true,
+            "targetSearchNetwork": true,
+            "targetContentNetwork": false,
+            "targetPartnerSearchNetwork": false
+          },
+          "name": "German Search Ads",
+          "campaignGroupId": "9328791290",
+          "id": "9335535326",
+          "campaignBudget": "customers/1481414841/campaignBudgets/6809347373",
+          "startDate": "2020-02-12",
+          "endDate": "2037-12-30",
+          "campaignBudgetDetail": {
+            "campaign": {
+              "resourceName": "customers/1481414841/campaigns/9335535322",
+              "id": "9335535322"
+            },
+            "campaignBudget": {
+              "resourceName": "customers/1481414841/campaignBudgets/6809347373",
+              "period": "DAILY",
+              "id": "6809347373",
+              "amountMicros": "10000000",
+              "currency": "USD"
+            }
+          },
+          "campaignDeviceList": [
+            "DESKTOP",
+            "MOBILE",
+            "TABLET"
+          ]
+        },
+        "metrics": {
+          "clicks": "151",
+          "conversions": 4,
+          "costMicros": "373011188",
+          "costPerConversion": 80820000,
+          "ctr": 0.027660743725957136,
+          "allConversions": 6,
+          "averageCpc": 2470272.7682119207,
+          "impressions": "5459"
+        }
+      },
+      {
+        "campaign": {
+          "resourceName": "customers/1481414841/campaigns/9328791290",
+          "status": "ACTIVE",
+          "networkSettings": {
+            "targetGoogleSearch": true,
+            "targetSearchNetwork": true,
+            "targetContentNetwork": false,
+            "targetPartnerSearchNetwork": false
+          },
+          "name": "French Search Ads",
+          "campaignGroupId": "9328791290",
+          "id": "9328791290",
+          "campaignBudget": "customers/1481414841/campaignBudgets/6809377679",
+          "startDate": "2020-02-12",
+          "endDate": "2037-12-30",
+          "campaignBudgetDetail": {
+            "campaign": {
+              "resourceName": "customers/1481414841/campaigns/9328791290",
+              "id": "9328791290"
+            },
+            "campaignBudget": {
+              "resourceName": "customers/1481414841/campaignBudgets/6809377679",
+              "period": "DAILY",
+              "id": "6809377679",
+              "amountMicros": "50000000",
+              "currency": "EUR"
+            }
+          },
+          "campaignDeviceList": [
+            "DESKTOP",
+            "MOBILE",
+            "TABLET"
+          ]
+        },
+        "metrics": {
+          "clicks": "475",
+          "conversions": 32,
+          "costMicros": "913020000",
+          "costPerConversion": 26077500,
+          "ctr": 0.03341540626099191,
+          "allConversions": 35,
+          "averageCpc": 1922147.3684210526,
+          "impressions": "14215"
+        }
+      },
+      {
+        "campaign": {
+          "resourceName": "customers/1481414841/campaigns/9335535322",
+          "status": "PAUSED",
+          "networkSettings": {
+            "targetGoogleSearch": true,
+            "targetSearchNetwork": true,
+            "targetContentNetwork": false,
+            "targetPartnerSearchNetwork": false
+          },
+          "name": "English Search Ads",
+          "campaignGroupId": "9328791290",
+          "id": "9335535322",
+          "campaignBudget": "customers/1481414841/campaignBudgets/6809347373",
+          "startDate": "2020-02-12",
+          "endDate": "2037-12-30",
+          "campaignBudgetDetail": {
+            "campaign": {
+              "resourceName": "customers/1481414841/campaigns/9335535322",
+              "id": "9335535322"
+            },
+            "campaignBudget": {
+              "resourceName": "customers/1481414841/campaignBudgets/6809347373",
+              "period": "DAILY",
+              "id": "6809347373",
+              "amountMicros": "10000000",
+              "currency": "USD"
+            }
+          },
+          "campaignDeviceList": [
+            "DESKTOP",
+            "MOBILE",
+            "TABLET"
+          ]
+        },
+        "metrics": {
+          "clicks": "151",
+          "conversions": 4,
+          "costMicros": "373011188",
+          "costPerConversion": 80820000,
+          "ctr": 0.027660743725957136,
+          "allConversions": 6,
+          "averageCpc": 2470272.7682119207,
+          "impressions": "5459"
+        }
+      },
+      {
+        "campaign": {
+          "resourceName": "customers/1481414841/campaigns/9328791290",
+          "status": "ACTIVE",
+          "networkSettings": {
+            "targetGoogleSearch": true,
+            "targetSearchNetwork": true,
+            "targetContentNetwork": false,
+            "targetPartnerSearchNetwork": false
+          },
+          "name": "Turkish Search Ads",
+          "campaignGroupId": "9328791290",
+          "id": "9328791299",
+          "campaignBudget": "customers/1481414841/campaignBudgets/6809377679",
+          "startDate": "2020-02-12",
+          "endDate": "2037-12-30",
+          "campaignBudgetDetail": {
+            "campaign": {
+              "resourceName": "customers/1481414841/campaigns/9328791290",
+              "id": "9328791290"
+            },
+            "campaignBudget": {
+              "resourceName": "customers/1481414841/campaignBudgets/6809377679",
+              "period": "DAILY",
+              "id": "6809377679",
+              "amountMicros": "50000000",
+              "currency": "TRY"
+            }
+          },
+          "campaignDeviceList": [
+            "DESKTOP",
+            "MOBILE",
+            "TABLET"
+          ]
+        },
+        "metrics": {
+          "clicks": "475",
+          "conversions": 32,
+          "costMicros": "913020000",
+          "costPerConversion": 26077500,
+          "ctr": 0.03341540626099191,
+          "allConversions": 35,
+          "averageCpc": 1922147.3684210526,
+          "impressions": "14215"
+        }
+      },
+      {
+        "campaign": {
+          "resourceName": "customers/1481414841/campaigns/9335535322",
+          "status": "PAUSED",
+          "networkSettings": {
+            "targetGoogleSearch": true,
+            "targetSearchNetwork": true,
+            "targetContentNetwork": false,
+            "targetPartnerSearchNetwork": false
+          },
+          "name": "German Search Ads",
+          "campaignGroupId": "9328791290",
+          "id": "9335535326",
+          "campaignBudget": "customers/1481414841/campaignBudgets/6809347373",
+          "startDate": "2020-02-12",
+          "endDate": "2037-12-30",
+          "campaignBudgetDetail": {
+            "campaign": {
+              "resourceName": "customers/1481414841/campaigns/9335535322",
+              "id": "9335535322"
+            },
+            "campaignBudget": {
+              "resourceName": "customers/1481414841/campaignBudgets/6809347373",
+              "period": "DAILY",
+              "id": "6809347373",
+              "amountMicros": "10000000",
+              "currency": "USD"
+            }
+          },
+          "campaignDeviceList": [
+            "DESKTOP",
+            "MOBILE",
+            "TABLET"
+          ]
+        },
+        "metrics": {
+          "clicks": "151",
+          "conversions": 4,
+          "costMicros": "373011188",
+          "costPerConversion": 80820000,
+          "ctr": 0.027660743725957136,
+          "allConversions": 6,
+          "averageCpc": 2470272.7682119207,
+          "impressions": "5459"
+        }
+      },
+      {
+        "campaign": {
+          "resourceName": "customers/1481414841/campaigns/9328791290",
+          "status": "ACTIVE",
+          "networkSettings": {
+            "targetGoogleSearch": true,
+            "targetSearchNetwork": true,
+            "targetContentNetwork": false,
+            "targetPartnerSearchNetwork": false
+          },
+          "name": "French Search Ads",
+          "campaignGroupId": "9328791290",
+          "id": "9328791290",
+          "campaignBudget": "customers/1481414841/campaignBudgets/6809377679",
+          "startDate": "2020-02-12",
+          "endDate": "2037-12-30",
+          "campaignBudgetDetail": {
+            "campaign": {
+              "resourceName": "customers/1481414841/campaigns/9328791290",
+              "id": "9328791290"
+            },
+            "campaignBudget": {
+              "resourceName": "customers/1481414841/campaignBudgets/6809377679",
+              "period": "DAILY",
+              "id": "6809377679",
+              "amountMicros": "50000000",
+              "currency": "EUR"
+            }
+          },
+          "campaignDeviceList": [
+            "DESKTOP",
+            "MOBILE",
+            "TABLET"
+          ]
+        },
+        "metrics": {
+          "clicks": "475",
+          "conversions": 32,
+          "costMicros": "913020000",
+          "costPerConversion": 26077500,
+          "ctr": 0.03341540626099191,
+          "allConversions": 35,
+          "averageCpc": 1922147.3684210526,
+          "impressions": "14215"
+        }
+      },
+      {
+        "campaign": {
+          "resourceName": "customers/1481414841/campaigns/9335535322",
+          "status": "PAUSED",
+          "networkSettings": {
+            "targetGoogleSearch": true,
+            "targetSearchNetwork": true,
+            "targetContentNetwork": false,
+            "targetPartnerSearchNetwork": false
+          },
+          "name": "English Search Ads",
+          "campaignGroupId": "9328791290",
+          "id": "9335535322",
+          "campaignBudget": "customers/1481414841/campaignBudgets/6809347373",
+          "startDate": "2020-02-12",
+          "endDate": "2037-12-30",
+          "campaignBudgetDetail": {
+            "campaign": {
+              "resourceName": "customers/1481414841/campaigns/9335535322",
+              "id": "9335535322"
+            },
+            "campaignBudget": {
+              "resourceName": "customers/1481414841/campaignBudgets/6809347373",
+              "period": "DAILY",
+              "id": "6809347373",
+              "amountMicros": "10000000",
+              "currency": "USD"
+            }
+          },
+          "campaignDeviceList": [
+            "DESKTOP",
+            "MOBILE",
+            "TABLET"
+          ]
+        },
+        "metrics": {
+          "clicks": "151",
+          "conversions": 4,
+          "costMicros": "373011188",
+          "costPerConversion": 80820000,
+          "ctr": 0.027660743725957136,
+          "allConversions": 6,
+          "averageCpc": 2470272.7682119207,
+          "impressions": "5459"
+        }
+      },
+      {
+        "campaign": {
+          "resourceName": "customers/1481414841/campaigns/9328791290",
+          "status": "ACTIVE",
+          "networkSettings": {
+            "targetGoogleSearch": true,
+            "targetSearchNetwork": true,
+            "targetContentNetwork": false,
+            "targetPartnerSearchNetwork": false
+          },
+          "name": "Turkish Search Ads",
+          "campaignGroupId": "9328791290",
+          "id": "9328791299",
+          "campaignBudget": "customers/1481414841/campaignBudgets/6809377679",
+          "startDate": "2020-02-12",
+          "endDate": "2037-12-30",
+          "campaignBudgetDetail": {
+            "campaign": {
+              "resourceName": "customers/1481414841/campaigns/9328791290",
+              "id": "9328791290"
+            },
+            "campaignBudget": {
+              "resourceName": "customers/1481414841/campaignBudgets/6809377679",
+              "period": "DAILY",
+              "id": "6809377679",
+              "amountMicros": "50000000",
+              "currency": "TRY"
+            }
+          },
+          "campaignDeviceList": [
+            "DESKTOP",
+            "MOBILE",
+            "TABLET"
+          ]
+        },
+        "metrics": {
+          "clicks": "475",
+          "conversions": 32,
+          "costMicros": "913020000",
+          "costPerConversion": 26077500,
+          "ctr": 0.03341540626099191,
+          "allConversions": 35,
+          "averageCpc": 1922147.3684210526,
+          "impressions": "14215"
+        }
+      },
+      {
+        "campaign": {
+          "resourceName": "customers/1481414841/campaigns/9335535322",
+          "status": "PAUSED",
+          "networkSettings": {
+            "targetGoogleSearch": true,
+            "targetSearchNetwork": true,
+            "targetContentNetwork": false,
+            "targetPartnerSearchNetwork": false
+          },
+          "name": "German Search Ads",
+          "campaignGroupId": "9328791290",
+          "id": "9335535326",
+          "campaignBudget": "customers/1481414841/campaignBudgets/6809347373",
+          "startDate": "2020-02-12",
+          "endDate": "2037-12-30",
+          "campaignBudgetDetail": {
+            "campaign": {
+              "resourceName": "customers/1481414841/campaigns/9335535322",
+              "id": "9335535322"
+            },
+            "campaignBudget": {
+              "resourceName": "customers/1481414841/campaignBudgets/6809347373",
+              "period": "DAILY",
+              "id": "6809347373",
+              "amountMicros": "10000000",
+              "currency": "USD"
+            }
+          },
+          "campaignDeviceList": [
+            "DESKTOP",
+            "MOBILE",
+            "TABLET"
+          ]
+        },
+        "metrics": {
+          "clicks": "151",
+          "conversions": 4,
+          "costMicros": "373011188",
+          "costPerConversion": 80820000,
+          "ctr": 0.027660743725957136,
+          "allConversions": 6,
+          "averageCpc": 2470272.7682119207,
+          "impressions": "5459"
+        }
+      },
+      {
+        "campaign": {
+          "resourceName": "customers/1481414841/campaigns/9328791290",
+          "status": "ACTIVE",
+          "networkSettings": {
+            "targetGoogleSearch": true,
+            "targetSearchNetwork": true,
+            "targetContentNetwork": false,
+            "targetPartnerSearchNetwork": false
+          },
+          "name": "French Search Ads",
+          "campaignGroupId": "9328791290",
+          "id": "9328791290",
+          "campaignBudget": "customers/1481414841/campaignBudgets/6809377679",
+          "startDate": "2020-02-12",
+          "endDate": "2037-12-30",
+          "campaignBudgetDetail": {
+            "campaign": {
+              "resourceName": "customers/1481414841/campaigns/9328791290",
+              "id": "9328791290"
+            },
+            "campaignBudget": {
+              "resourceName": "customers/1481414841/campaignBudgets/6809377679",
+              "period": "DAILY",
+              "id": "6809377679",
+              "amountMicros": "50000000",
+              "currency": "EUR"
+            }
+          },
+          "campaignDeviceList": [
+            "DESKTOP",
+            "MOBILE",
+            "TABLET"
+          ]
+        },
+        "metrics": {
+          "clicks": "475",
+          "conversions": 32,
+          "costMicros": "913020000",
+          "costPerConversion": 26077500,
+          "ctr": 0.03341540626099191,
+          "allConversions": 35,
+          "averageCpc": 1922147.3684210526,
+          "impressions": "14215"
+        }
+      },
+      {
+        "campaign": {
+          "resourceName": "customers/1481414841/campaigns/9335535322",
+          "status": "PAUSED",
+          "networkSettings": {
+            "targetGoogleSearch": true,
+            "targetSearchNetwork": true,
+            "targetContentNetwork": false,
+            "targetPartnerSearchNetwork": false
+          },
+          "name": "English Search Ads",
+          "campaignGroupId": "9328791290",
+          "id": "9335535322",
+          "campaignBudget": "customers/1481414841/campaignBudgets/6809347373",
+          "startDate": "2020-02-12",
+          "endDate": "2037-12-30",
+          "campaignBudgetDetail": {
+            "campaign": {
+              "resourceName": "customers/1481414841/campaigns/9335535322",
+              "id": "9335535322"
+            },
+            "campaignBudget": {
+              "resourceName": "customers/1481414841/campaignBudgets/6809347373",
+              "period": "DAILY",
+              "id": "6809347373",
+              "amountMicros": "10000000",
+              "currency": "USD"
+            }
+          },
+          "campaignDeviceList": [
+            "DESKTOP",
+            "MOBILE",
+            "TABLET"
+          ]
+        },
+        "metrics": {
+          "clicks": "151",
+          "conversions": 4,
+          "costMicros": "373011188",
+          "costPerConversion": 80820000,
+          "ctr": 0.027660743725957136,
+          "allConversions": 6,
+          "averageCpc": 2470272.7682119207,
+          "impressions": "5459"
+        }
+      },
+      {
+        "campaign": {
+          "resourceName": "customers/1481414841/campaigns/9328791290",
+          "status": "ACTIVE",
+          "networkSettings": {
+            "targetGoogleSearch": true,
+            "targetSearchNetwork": true,
+            "targetContentNetwork": false,
+            "targetPartnerSearchNetwork": false
+          },
+          "name": "Turkish Search Ads",
+          "campaignGroupId": "9328791290",
+          "id": "9328791299",
+          "campaignBudget": "customers/1481414841/campaignBudgets/6809377679",
+          "startDate": "2020-02-12",
+          "endDate": "2037-12-30",
+          "campaignBudgetDetail": {
+            "campaign": {
+              "resourceName": "customers/1481414841/campaigns/9328791290",
+              "id": "9328791290"
+            },
+            "campaignBudget": {
+              "resourceName": "customers/1481414841/campaignBudgets/6809377679",
+              "period": "DAILY",
+              "id": "6809377679",
+              "amountMicros": "50000000",
+              "currency": "TRY"
+            }
+          },
+          "campaignDeviceList": [
+            "DESKTOP",
+            "MOBILE",
+            "TABLET"
+          ]
+        },
+        "metrics": {
+          "clicks": "475",
+          "conversions": 32,
+          "costMicros": "913020000",
+          "costPerConversion": 26077500,
+          "ctr": 0.03341540626099191,
+          "allConversions": 35,
+          "averageCpc": 1922147.3684210526,
+          "impressions": "14215"
+        }
+      },
+      {
+        "campaign": {
+          "resourceName": "customers/1481414841/campaigns/9335535322",
+          "status": "PAUSED",
+          "networkSettings": {
+            "targetGoogleSearch": true,
+            "targetSearchNetwork": true,
+            "targetContentNetwork": false,
+            "targetPartnerSearchNetwork": false
+          },
+          "name": "German Search Ads",
+          "campaignGroupId": "9328791290",
+          "id": "9335535326",
+          "campaignBudget": "customers/1481414841/campaignBudgets/6809347373",
+          "startDate": "2020-02-12",
+          "endDate": "2037-12-30",
+          "campaignBudgetDetail": {
+            "campaign": {
+              "resourceName": "customers/1481414841/campaigns/9335535322",
+              "id": "9335535322"
+            },
+            "campaignBudget": {
+              "resourceName": "customers/1481414841/campaignBudgets/6809347373",
+              "period": "DAILY",
+              "id": "6809347373",
+              "amountMicros": "10000000",
+              "currency": "USD"
+            }
+          },
+          "campaignDeviceList": [
+            "DESKTOP",
+            "MOBILE",
+            "TABLET"
+          ]
+        },
+        "metrics": {
+          "clicks": "151",
+          "conversions": 4,
+          "costMicros": "373011188",
+          "costPerConversion": 80820000,
+          "ctr": 0.027660743725957136,
+          "allConversions": 6,
+          "averageCpc": 2470272.7682119207,
+          "impressions": "5459"
+        }
+      },
+      {
+        "campaign": {
+          "resourceName": "customers/1481414841/campaigns/9328791290",
+          "status": "ACTIVE",
+          "networkSettings": {
+            "targetGoogleSearch": true,
+            "targetSearchNetwork": true,
+            "targetContentNetwork": false,
+            "targetPartnerSearchNetwork": false
+          },
+          "name": "French Search Ads",
+          "campaignGroupId": "9328791290",
+          "id": "9328791290",
+          "campaignBudget": "customers/1481414841/campaignBudgets/6809377679",
+          "startDate": "2020-02-12",
+          "endDate": "2037-12-30",
+          "campaignBudgetDetail": {
+            "campaign": {
+              "resourceName": "customers/1481414841/campaigns/9328791290",
+              "id": "9328791290"
+            },
+            "campaignBudget": {
+              "resourceName": "customers/1481414841/campaignBudgets/6809377679",
+              "period": "DAILY",
+              "id": "6809377679",
+              "amountMicros": "50000000",
+              "currency": "EUR"
+            }
+          },
+          "campaignDeviceList": [
+            "DESKTOP",
+            "MOBILE",
+            "TABLET"
+          ]
+        },
+        "metrics": {
+          "clicks": "475",
+          "conversions": 32,
+          "costMicros": "913020000",
+          "costPerConversion": 26077500,
+          "ctr": 0.03341540626099191,
+          "allConversions": 35,
+          "averageCpc": 1922147.3684210526,
+          "impressions": "14215"
+        }
+      },
+      {
+        "campaign": {
+          "resourceName": "customers/1481414841/campaigns/9335535322",
+          "status": "PAUSED",
+          "networkSettings": {
+            "targetGoogleSearch": true,
+            "targetSearchNetwork": true,
+            "targetContentNetwork": false,
+            "targetPartnerSearchNetwork": false
+          },
+          "name": "English Search Ads",
+          "campaignGroupId": "9328791290",
+          "id": "9335535322",
+          "campaignBudget": "customers/1481414841/campaignBudgets/6809347373",
+          "startDate": "2020-02-12",
+          "endDate": "2037-12-30",
+          "campaignBudgetDetail": {
+            "campaign": {
+              "resourceName": "customers/1481414841/campaigns/9335535322",
+              "id": "9335535322"
+            },
+            "campaignBudget": {
+              "resourceName": "customers/1481414841/campaignBudgets/6809347373",
+              "period": "DAILY",
+              "id": "6809347373",
+              "amountMicros": "10000000",
+              "currency": "USD"
+            }
+          },
+          "campaignDeviceList": [
+            "DESKTOP",
+            "MOBILE",
+            "TABLET"
+          ]
+        },
+        "metrics": {
+          "clicks": "151",
+          "conversions": 4,
+          "costMicros": "373011188",
+          "costPerConversion": 80820000,
+          "ctr": 0.027660743725957136,
+          "allConversions": 6,
+          "averageCpc": 2470272.7682119207,
+          "impressions": "5459"
+        }
+      },
+      {
+        "campaign": {
+          "resourceName": "customers/1481414841/campaigns/9328791290",
+          "status": "ACTIVE",
+          "networkSettings": {
+            "targetGoogleSearch": true,
+            "targetSearchNetwork": true,
+            "targetContentNetwork": false,
+            "targetPartnerSearchNetwork": false
+          },
+          "name": "Turkish Search Ads",
+          "campaignGroupId": "9328791290",
+          "id": "9328791299",
+          "campaignBudget": "customers/1481414841/campaignBudgets/6809377679",
+          "startDate": "2020-02-12",
+          "endDate": "2037-12-30",
+          "campaignBudgetDetail": {
+            "campaign": {
+              "resourceName": "customers/1481414841/campaigns/9328791290",
+              "id": "9328791290"
+            },
+            "campaignBudget": {
+              "resourceName": "customers/1481414841/campaignBudgets/6809377679",
+              "period": "DAILY",
+              "id": "6809377679",
+              "amountMicros": "50000000",
+              "currency": "TRY"
+            }
+          },
+          "campaignDeviceList": [
+            "DESKTOP",
+            "MOBILE",
+            "TABLET"
+          ]
+        },
+        "metrics": {
+          "clicks": "475",
+          "conversions": 32,
+          "costMicros": "913020000",
+          "costPerConversion": 26077500,
+          "ctr": 0.03341540626099191,
+          "allConversions": 35,
+          "averageCpc": 1922147.3684210526,
+          "impressions": "14215"
+        }
+      },
+      {
+        "campaign": {
+          "resourceName": "customers/1481414841/campaigns/9335535322",
+          "status": "PAUSED",
+          "networkSettings": {
+            "targetGoogleSearch": true,
+            "targetSearchNetwork": true,
+            "targetContentNetwork": false,
+            "targetPartnerSearchNetwork": false
+          },
+          "name": "German Search Ads",
+          "campaignGroupId": "9328791290",
+          "id": "9335535326",
+          "campaignBudget": "customers/1481414841/campaignBudgets/6809347373",
+          "startDate": "2020-02-12",
+          "endDate": "2037-12-30",
+          "campaignBudgetDetail": {
+            "campaign": {
+              "resourceName": "customers/1481414841/campaigns/9335535322",
+              "id": "9335535322"
+            },
+            "campaignBudget": {
+              "resourceName": "customers/1481414841/campaignBudgets/6809347373",
+              "period": "DAILY",
+              "id": "6809347373",
+              "amountMicros": "10000000",
+              "currency": "USD"
+            }
+          },
+          "campaignDeviceList": [
+            "DESKTOP",
+            "MOBILE",
+            "TABLET"
+          ]
+        },
+        "metrics": {
+          "clicks": "151",
+          "conversions": 4,
+          "costMicros": "373011188",
+          "costPerConversion": 80820000,
+          "ctr": 0.027660743725957136,
+          "allConversions": 6,
+          "averageCpc": 2470272.7682119207,
+          "impressions": "5459"
+        }
+      }
+    ]
+  }
