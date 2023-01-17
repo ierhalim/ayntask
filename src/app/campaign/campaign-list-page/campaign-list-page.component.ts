@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { map } from 'rxjs';
+import { filter, map } from 'rxjs';
 import { CampaignService } from '../../data-access/campaign-services/campaign.service';
 import { CampaignItemsModel, GetCampaignDataResultModel } from '../../data-access/campaign-services/models/get-campaign-data-result.model';
 import { CampaignListPageModel } from './models/campaign-list-page.model';
@@ -20,17 +20,24 @@ export class CampaignListPageComponent implements OnInit {
     items: []
   };
 
+  tableStatus = {
+    currentPage: 1,
+    pageSize: 5,
+    search: ''
+  };
+
+
 
   ngOnInit(): void {
     this.loadCampaigns();
   }
 
-  private loadCampaigns() {
+   loadCampaigns() {
     const sub = this.campaignService.getCampaigns({
-      currentPage: 1,
-      daysBefore: 1,
-      pageSize: 20,
-      search: ''
+      currentPage: this.tableStatus.currentPage,
+      daysBefore: 30,
+      pageSize: this.tableStatus.pageSize,
+      search: this.tableStatus.search,
     }).pipe(map(
       (result: GetCampaignDataResultModel) => ({
         totalDataCount: result.totalDataCount,
@@ -66,11 +73,13 @@ export class CampaignListPageComponent implements OnInit {
 
 
   handleFilter(filterValue: string) {
-    console.log(filterValue);
+    this.tableStatus.search = filterValue;
+    this.loadCampaigns();
   }
 
   handleFilterClear() {
-    // TODO: Filter is removed, send a new request.
+    this.tableStatus.search = "";
+    this.loadCampaigns();
   }
 
 }

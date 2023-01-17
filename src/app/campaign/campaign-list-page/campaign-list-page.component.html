@@ -24,31 +24,41 @@
         </div>
     </div>
     <div class="ayn-panel-body">
-        <div class="ayn-toolbar">
-            <div class="ayn-toolbar-section ayn-toolbar-section-start">
-                <button type="button" class="ayn-button ayn-button-fancy ayn-button-rounded">
-                    Create New Campaign
-                    <i class="fa-solid fa-plus"></i>
-                </button>
-                <button class="ayn-button ayn-button-outline ayn-button-success ayn-button-rounded">
-                    Turn On
-                    <i class="fa-solid fa-play"></i>
-                </button>
-                <button class="ayn-button ayn-button-outline ayn-button-warning ayn-button-rounded">
-                    Turn Of
-                    <i class="fa-solid fa-pause"></i>
-                </button>
-            </div>
-            <div class="ayn-toolbar-section ayn-toolbar-section-end">
-                <i id="refreshIcon" class="fa-solid fa-rotate-right"></i>
-                <span class="ayn-input-icon">
-                    <input type="text" class="ayn-input ayn-input-rounded" (aynDelayedInput)="handleFilter($event)"
-                        (emptyInput)="handleFilterClear()" placeholder="Type name or id to filter" />
-                    <i class="fa-solid fa-search text-primary"></i>
-                </span>
-            </div>
-        </div>
-        <ayn-table [value]="pageModel.items">
+
+        <ayn-table [value]="pageModel.items" aynTablePager 
+        [totalDataCount]="pageModel.totalDataCount" 
+        [(currentPage)]="tableStatus.currentPage"             
+        (currentPageChange)="loadCampaigns()"
+        >
+            <ng-container tableToolbar>
+                <div class="ayn-toolbar">
+                    <div class="ayn-toolbar-section ayn-toolbar-section-start">
+                        <button type="button" class="ayn-button ayn-button-fancy ayn-button-rounded">
+                            Create New Campaign
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <button class="ayn-button ayn-button-outline ayn-button-success ayn-button-rounded">
+                            Turn On
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <button class="ayn-button ayn-button-outline ayn-button-warning ayn-button-rounded">
+                            Turn Of
+                            <i class="fa-solid fa-pause"></i>
+                        </button>
+                    </div>
+                    <div class="ayn-toolbar-section ayn-toolbar-section-end">
+                        <i id="refreshIcon" class="fa-solid fa-rotate-right"></i>
+                        <span class="ayn-input-icon">
+                            <input type="text" class="ayn-input ayn-input-rounded" (aynDelayedInput)="handleFilter($event)"
+                                (emptyInput)="handleFilterClear()" placeholder="Type name or id to filter" />
+                            <i class="fa-solid fa-search text-primary"></i>
+                        </span>
+
+                        <ayn-table-pager-navigator></ayn-table-pager-navigator>
+
+                    </div>
+                </div>
+            </ng-container>
             <ng-container tableHead>
                 <tr>
                     <th>Type</th>
@@ -122,6 +132,15 @@
                 </tr>
             </ng-template>
 
+            <ng-container tableFooter>
+                <div class="ayn-toolbar">
+                    <div class="ayn-toolbar-section ayn-toolbar-section-end">
+                        <strong>List</strong>
+                        <ayn-table-pager-page-size-selector [(pageSize)]="tableStatus.pageSize"                         (pageSizeChange)="loadCampaigns()"
+                        ></ayn-table-pager-page-size-selector>
+                    </div>
+                </div>
+            </ng-container>
         </ayn-table>
 
     </div>
