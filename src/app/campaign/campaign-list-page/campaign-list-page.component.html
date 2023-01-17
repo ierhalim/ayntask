@@ -93,7 +93,7 @@
                     </td>
                     <td class="text-center">
                         <div>
-                            {{item.budgetMicros}}
+                            {{item.budgetMicros | microCurrency: item.budgetCurrency}}
                         </div>
                         <div>{{item.budgetPeriod}}</div>
                     </td>
@@ -111,7 +111,7 @@
                         {{item.clicks}}
                     </td>
                     <td class="text-center">
-                        {{item.averageCpc}}
+                        {{item.averageCpc | microCurrency: item.budgetCurrency}}
                     </td>
                     <td class="text-center">
                         {{item.spend}}

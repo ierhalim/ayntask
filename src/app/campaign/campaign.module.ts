@@ -8,6 +8,7 @@ import { TableModule } from '../ui/table/table.module';
 import { CheckboxComponent } from '../ui/checkbox/checkbox.component';
 import { ToggleSwitchComponent } from '../ui/toggle-switch/toggle-switch.component';
 import { FormsModule } from '@angular/forms';
+import { MicroCurrencyPipe } from '../pipes/micro-currency.pipe';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     TableModule,
     CheckboxComponent,
     ToggleSwitchComponent,
-    FormsModule
+    FormsModule,
+    MicroCurrencyPipe
   ]
 })
 export class CampaignModule { }

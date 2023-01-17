@@ -1,3 +1,4 @@
+import { CurrencyPipe } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -14,7 +15,8 @@ import { DataAccessModule } from './data-access/data-access.module';
     AppRoutingModule,
     DataAccessModule.forRoot()
   ],
-  providers: [],
+  //Work arround: Maybe there should be some kind of shared module would be good to declare our pipes and provide dependencies.
+  providers: [CurrencyPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
