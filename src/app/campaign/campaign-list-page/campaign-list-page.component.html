@@ -34,11 +34,11 @@
                             Create New Campaign
                             <i class="fa-solid fa-plus"></i>
                         </button>
-                        <button class="ayn-button ayn-button-outline ayn-button-success ayn-button-rounded">
+                        <button class="ayn-button ayn-button-outline ayn-button-success ayn-button-rounded" (click)="activateSelecteds()">
                             Turn On
                             <i class="fa-solid fa-play"></i>
                         </button>
-                        <button class="ayn-button ayn-button-outline ayn-button-warning ayn-button-rounded">
+                        <button class="ayn-button ayn-button-outline ayn-button-warning ayn-button-rounded" (click)="pauseSelecteds()">
                             Turn Of
                             <i class="fa-solid fa-pause"></i>
                         </button>
@@ -92,6 +92,7 @@
                     </td>
                     <td class="text-center">
                         <ayn-toggle-switch [(ngModel)]="item.isActive"
+                            (ngModelChange)="handleItemActiveStatusChange(item)"
                             [ngModelOptions]="{standalone: true}"></ayn-toggle-switch>
                     </td>
                     <td class="text-center">

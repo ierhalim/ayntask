@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { filter, map } from 'rxjs';
+import { catchError, forkJoin, map, of } from 'rxjs';
 import { CampaignService } from '../../data-access/campaign-services/campaign.service';
 import { CampaignItemsModel, GetCampaignDataResultModel } from '../../data-access/campaign-services/models/get-campaign-data-result.model';
 import { CampaignListPageModel, CampaignTableRowModel } from './models/campaign-list-page.model';
@@ -33,6 +33,11 @@ export class CampaignListPageComponent implements OnInit {
     this.loadCampaigns();
   }
 
+
+
+  // DATA LOGIC.
+
+  //#region This section should be seperated service.
   loadCampaigns() {
     const sub = this.campaignService.getCampaigns({
       currentPage: this.tableStatus.currentPage,
@@ -72,7 +77,53 @@ export class CampaignListPageComponent implements OnInit {
     });
   }
 
-  
+  handleItemActiveStatusChange(item: CampaignTableRowModel) {
+    const sub = this.campaignService.updateCampaignStatus({
+      newStatus: item.isActive ? 'ACTIVE' : 'PAUSED',
+      campaignId: item.id
+    }).subscribe({
+      next: () => {
+        // TODO: Validate with server value.
+        item.isActive = !item.isActive;
+      },
+      error: (err) => {
+        // TODO: Show error message
+        console.error(err);
+        sub.unsubscribe();
+      }
+    });
+  }
+
+  activateSelecteds() {
+    this.bulkStatusUpdate(this.selectedCampaigns, 'ACTIVE');
+  }
+
+  pauseSelecteds() {
+    this.bulkStatusUpdate(this.selectedCampaigns, 'PAUSED');
+  }
+
+  private bulkStatusUpdate(campaigns: Array<CampaignTableRowModel>, newStatus: 'ACTIVE' | 'PAUSED') {
+    const observables = campaigns.map(campaign => {
+      return this.campaignService.updateCampaignStatus({ newStatus: newStatus, campaignId: campaign.id })
+        .pipe(catchError((err) => {
+          // TODO: Add proper information about failed messages.
+          return of(err)
+        }));
+    });
+    const sub = forkJoin(observables).subscribe({
+      next: () => {
+        // TODO: Filter failed reuqests add message about it.
+        this.selectedCampaigns.forEach((campaign: CampaignTableRowModel) => { campaign.isActive = (newStatus === 'ACTIVE') });
+      },
+      error: () => {
+        sub.unsubscribe();
+      }
+    });
+  }
+
+  //#endregion
+
+
   handleFilter(filterValue: string) {
     this.tableStatus.search = filterValue;
     this.loadCampaigns();

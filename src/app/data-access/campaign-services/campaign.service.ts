@@ -1,6 +1,6 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpStatusCode } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { map, Observable, of, tap, throwError } from "rxjs";
+import { delay, map, Observable, of, tap, throwError } from "rxjs";
 import { CampaignItemsModel, GetCampaignDataResultModel } from "./models/get-campaign-data-result.model";
 import { GetCampaignRequestModel } from "./models/get-campaign-request.model";
 import { SetCampaignStatusRequestModel } from "./models/set-campaign-status-request.model";
@@ -64,12 +64,12 @@ export class CampaignService {
     }
 
 
-    updateCampaignStatus(reuqestModel: SetCampaignStatusRequestModel): Observable<void> {
+    updateCampaignStatus(reuqestModel: SetCampaignStatusRequestModel): Observable<HttpStatusCode> {
         const campaign = this.loadedCampaigns.items.find(x => x.campaign.id === reuqestModel.campaignId);
         if (!campaign) {
-            return throwError(() => ({ statusCode: 404, statusMessage: 'Could not found campaign.' }));
+            return throwError(() => (404));
         }
         campaign.campaign.status = reuqestModel.newStatus;
-        return of();
+        return of(HttpStatusCode.Ok).pipe(delay(2000));
     }
 }
