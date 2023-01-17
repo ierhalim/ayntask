@@ -1,0 +1,57 @@
+@import '/src/assets/styles/theme';
+
+// https://www.w3schools.com/howto/howto_css_switch.asp
+
+$switch-width:34px;
+$switch-heigth: 19px;
+$pointer-size: 15px;
+
+$move-translation: $switch-width - $pointer-size - 2px;
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: $switch-width;
+    height: $switch-heigth;
+    vertical-align: middle;
+    &.toggle-disabled{
+        .slider{
+            cursor: not-allowed;
+        }
+    }
+    &.toggle-active {
+        .slider {
+            border:1px solid  $color-success;
+            &:before {
+                transform: translateX($move-translation);
+                background-color: $color-success;
+            }
+            
+        }
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 11px;
+        border:1px solid  #6884a9;
+        &::before {
+            position: absolute;
+            content: "";
+            height: $pointer-size;
+            width: $pointer-size;
+            left:0;
+            top:1px;
+            background-color: #6884a9;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 50%;
+        }
+    }
+}

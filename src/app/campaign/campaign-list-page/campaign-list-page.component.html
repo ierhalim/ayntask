@@ -6,44 +6,142 @@
 
 <div class="ayn-panel">
     <div class="ayn-panel-header">
-
         <div class="ayn-toolbar">
-
             <div class="ayn-toolbar-section ayn-toolbar-section-start">
                 <!--TODO: A new component for tabs.-->
-                <ul>
-                    <li>Campaigns<i class="fa-solid fa-rocket"></i></li>
-                    <li>Drafts<i class="fa-regular fa-floppy-disk"></i></li>
-                </ul>
             </div>
-
             <div class="ayn-toolbar-section ayn-toolbar-section-end">
-                <select [value]="-30">
+                <select [value]="-30" class="ayn-select ayn-select-rounded">
                     <option value="-3">Last 3 Day</option>
                     <option value="-7">Last 7 Day</option>
                     <option value="-30">Last 30 Day</option>
                 </select>
             </div>
-
         </div>
     </div>
     <div class="ayn-panel-body">
-        <div class="ayn-toolbar">
-            <div class="ayn-toolbar-section ayn-toolbar-section-start">
-                <button type="button" class="ayn-button ayn-button-fancy ayn-button-rounded">
-                    Create New Campaign
-                    <i class="fa-solid fa-plus"></i>
-                </button>
-                <button class="ayn-button ayn-button-outline ayn-button-success ayn-button-rounded">
-                    Turn On
-                    <i class="fa-solid fa-play"></i>
-                </button>
-                <button class="ayn-button ayn-button-outline ayn-button-warning ayn-button-rounded">
-                    Turn Of
-                    <i class="fa-solid fa-pause"></i>
-                </button>
-            </div>
-            <div class="ayn-toolbar-section ayn-toolbar-section-end"></div>
-        </div>
+        <!--TODO Child component or child route-->
+        <ayn-table [value]="pageModel.items" aynTablePager [totalDataCount]="pageModel.totalDataCount"
+            [(currentPage)]="tableStatus.currentPage" (currentPageChange)="loadCampaigns()" aynTableSelectable
+            [selectedItems]="selectedCampaigns">
+            <ng-container tableToolbar>
+                <div class="ayn-toolbar">
+                    <div class="ayn-toolbar-section ayn-toolbar-section-start">
+                        <button type="button" class="ayn-button ayn-button-fancy ayn-button-rounded">
+                            Create New Campaign
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <button class="ayn-button ayn-button-outline ayn-button-success ayn-button-rounded"
+                            (click)="activateSelecteds()">
+                            Turn On
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <button class="ayn-button ayn-button-outline ayn-button-warning ayn-button-rounded"
+                            (click)="pauseSelecteds()">
+                            Turn Of
+                            <i class="fa-solid fa-pause"></i>
+                        </button>
+                    </div>
+                    <div class="ayn-toolbar-section ayn-toolbar-section-end">
+                        <i id="refreshIcon" class="fa-solid fa-rotate-right"></i>
+                        <span class="ayn-input-icon">
+                            <input type="text" class="ayn-input ayn-input-rounded"
+                                (aynDelayedInput)="handleFilter($event)" (emptyInput)="handleFilterClear()"
+                                placeholder="Type name or id to filter" />
+                            <i class="fa-solid fa-search text-primary"></i>
+                        </span>
+
+                        <ayn-table-pager-navigator></ayn-table-pager-navigator>
+
+                    </div>
+                </div>
+            </ng-container>
+            <ng-container tableHead>
+                <tr>
+                    <th>Type</th>
+                    <th>
+                        <ayn-checkbox aynTableSelectAllInput></ayn-checkbox>
+                    </th>
+                    <th>Status</th>
+                    <th>Name</th>
+                    <th>Details</th>
+                    <th>Budget</th>
+                    <th>Start/End Date</th>
+                    <th>Result</th>
+                    <th>Impression</th>
+                    <th>Clicks</th>
+                    <th>CPC</th>
+                    <th>Spend</th>
+                    <th>
+                        <i class="fa-solid fa-pen"></i>
+                    </th>
+                </tr>
+            </ng-container>
+
+            <ng-template let-item="item">
+                <tr>
+                    <td>
+                        <span class="ayn-tag">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Campaign
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <ayn-checkbox [aynTableSelectItemInput]="item"></ayn-checkbox>
+                    </td>
+                    <td class="text-center">
+                        <ayn-toggle-switch [(ngModel)]="item.isActive"
+                            (ngModelChange)="handleItemActiveStatusChange(item)"
+                            [ngModelOptions]="{standalone: true}"></ayn-toggle-switch>
+                    </td>
+                    <td class="text-center">
+                        {{item.name}}
+                    </td>
+                    <td class="text-center">
+                        <button class="ayn-button ayn-button-primary ayn-button-sm ayn-button-rounded">
+                            <i class="fa-solid fa-chart-simple"></i>
+                        </button>
+                    </td>
+                    <td class="text-center">
+                        <div>
+                            {{item.budgetMicros | microCurrency: item.budgetCurrency}}
+                        </div>
+                        <div>{{item.budgetPeriod}}</div>
+                    </td>
+                    <td class="text-center">
+                        <div>{{item.startDate | date: 'dd MMM yyyy'}}</div>
+                        <div>{{item.endDate | date: 'dd MMM yyyy'}}</div>
+                    </td>
+                    <td class="text-center">
+                        {{item.result}}
+                    </td>
+                    <td class="text-center">
+                        {{item.impressions}}
+                    </td>
+                    <td class="text-center">
+                        {{item.clicks}}
+                    </td>
+                    <td class="text-center">
+                        {{item.averageCpc | microCurrency: item.budgetCurrency}}
+                    </td>
+                    <td class="text-center">
+                        {{item.spend}}
+                    </td>
+                    <td class="text-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </td>
+                </tr>
+            </ng-template>
+
+            <ng-container tableFooter>
+                <div class="ayn-toolbar">
+                    <div class="ayn-toolbar-section ayn-toolbar-section-end">
+                        <strong>List</strong>
+                        <ayn-table-pager-page-size-selector [(pageSize)]="tableStatus.pageSize"
+                            (pageSizeChange)="loadCampaigns()"></ayn-table-pager-page-size-selector>
+                    </div>
+                </div>
+            </ng-container>
+        </ayn-table>
     </div>
 </div>

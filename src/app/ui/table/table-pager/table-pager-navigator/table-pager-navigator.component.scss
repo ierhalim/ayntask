@@ -1,0 +1,21 @@
+@import '/src/assets/styles/theme';
+
+.pager-navigator{
+    border:1px solid $color-default;
+    padding:5px;
+    border-radius: 16px;
+    display: table-cell;
+}
+
+.pager-navigator-button {
+    height: 46px;
+    text-align: center;
+    &.pager-navigator-button-prev {
+        border-top-left-radius: 16px;
+        border-bottom-left-radius: 16px;
+    }
+    &.pager-navigator-button-next{
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+}

@@ -30,13 +30,23 @@
     // Each button in the design had diffrent padding sizes (for each direaction), instead of checking each one, giving the avg padding value.
     padding: 0 18px;
 
-    i {
+
+    i:not(:first-child) {
         margin-left: 11px;
         font-size: 25px;
     }
 
-    &.ayn-button-rounded {
+    &.ayn-button-sm{
+        height: 40px;
+        width: 40px;
+        padding:0;
+    }
+
+    &.ayn-button-rounded:not(.ayn-button-sm) {
         border-radius: 20px;
+    }
+    &.ayn-button-rounded.ayn-button-sm{
+        border-radius: 10px;
     }
 
     &.ayn-button-fancy {
@@ -46,10 +56,13 @@
         color: white;
     }
 
+    &.ayn-button-primary{
+        @include ayn-button-colored($color-primary, $color-accent-primary)
+    }
+
     &.ayn-button-outline {
         border: 1px solid $color-default;
         background-color: transparent;
-
         @include ayn-button-outline-colors();
     }
 }
