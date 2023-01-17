@@ -1,0 +1,23 @@
+@import '/src/assets/styles/theme';
+
+.checkbox {
+    cursor: pointer;
+    border-radius: 8px;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: middle;
+
+    &.checkbox-unchecked {
+        background-color: white;
+        border:1px solid #d7e1ea;
+    }
+
+    &.checkbox-checked {
+        background-color: $color-success;
+    }
+
+    &.disabled {
+        cursor: not-allowed;
+    }
+}

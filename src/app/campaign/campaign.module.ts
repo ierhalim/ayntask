@@ -5,6 +5,7 @@ import { CampaignRoutingModule } from './campaign-routing.module';
 import { PageHeaderComponent } from '../ui/layout/page-header/page-header.component';
 import { DelayedInputDirective } from '../ui/delayed-input/delayed-input.directive';
 import { TableModule } from '../ui/table/table.module';
+import { CheckboxComponent } from '../ui/checkbox/checkbox.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { TableModule } from '../ui/table/table.module';
     CampaignRoutingModule,
     PageHeaderComponent,
     DelayedInputDirective,
-    TableModule
+    TableModule,
+    CheckboxComponent
   ]
 })
 export class CampaignModule { }
