@@ -11,6 +11,8 @@ export class TableComponent<TCollectionType> {
 
   private _value: Array<TCollectionType> | null = new Array<TCollectionType>();
 
+  // TODO: Add a trackby property to use it in child directives instead of instances.
+
   @Input()
   set value(val: Array<TCollectionType> | null) {
     if (!!val) {

@@ -1,12 +1,19 @@
-import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, forwardRef, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AYN_BOOLEAN_INPUT_VALUE } from '../injection/boolean-input-value.injection';
 
 @Component({
   selector: 'ayn-checkbox',
   template: `<span class="checkbox" [ngClass]="{'checkbox-checked': value, 'checkbox-unchecked': !value}" (click)="handleClick();"></span>`,
   standalone: true,
   imports: [CommonModule],
-  styleUrls: ['./checkbox.component.scss']
+  styleUrls: ['./checkbox.component.scss'],
+  providers: [
+    {
+      provide: AYN_BOOLEAN_INPUT_VALUE,
+      useExisting: forwardRef(() => CheckboxComponent)
+    }
+  ]
 })
 export class CheckboxComponent implements OnInit, OnDestroy {
 

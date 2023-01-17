@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { filter, map } from 'rxjs';
 import { CampaignService } from '../../data-access/campaign-services/campaign.service';
 import { CampaignItemsModel, GetCampaignDataResultModel } from '../../data-access/campaign-services/models/get-campaign-data-result.model';
-import { CampaignListPageModel } from './models/campaign-list-page.model';
+import { CampaignListPageModel, CampaignTableRowModel } from './models/campaign-list-page.model';
 
 @Component({
   selector: 'ayn-campaign-list-page',
@@ -15,6 +15,9 @@ export class CampaignListPageComponent implements OnInit {
     private readonly campaignService: CampaignService
   ) { }
 
+
+  selectedCampaigns = new Array<CampaignTableRowModel>();
+
   pageModel: CampaignListPageModel = {
     totalDataCount: 0,
     items: []
@@ -26,13 +29,11 @@ export class CampaignListPageComponent implements OnInit {
     search: ''
   };
 
-
-
   ngOnInit(): void {
     this.loadCampaigns();
   }
 
-   loadCampaigns() {
+  loadCampaigns() {
     const sub = this.campaignService.getCampaigns({
       currentPage: this.tableStatus.currentPage,
       daysBefore: 30,
@@ -71,7 +72,7 @@ export class CampaignListPageComponent implements OnInit {
     });
   }
 
-
+  
   handleFilter(filterValue: string) {
     this.tableStatus.search = filterValue;
     this.loadCampaigns();

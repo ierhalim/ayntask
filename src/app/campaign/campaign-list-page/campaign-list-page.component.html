@@ -24,12 +24,9 @@
         </div>
     </div>
     <div class="ayn-panel-body">
-
-        <ayn-table [value]="pageModel.items" aynTablePager 
-        [totalDataCount]="pageModel.totalDataCount" 
-        [(currentPage)]="tableStatus.currentPage"             
-        (currentPageChange)="loadCampaigns()"
-        >
+        <!--TODO Child component or child route-->
+        <ayn-table [value]="pageModel.items" aynTablePager [totalDataCount]="pageModel.totalDataCount"
+            [(currentPage)]="tableStatus.currentPage" (currentPageChange)="loadCampaigns()" aynTableSelectable [selectedItems]="selectedCampaigns">
             <ng-container tableToolbar>
                 <div class="ayn-toolbar">
                     <div class="ayn-toolbar-section ayn-toolbar-section-start">
@@ -49,8 +46,9 @@
                     <div class="ayn-toolbar-section ayn-toolbar-section-end">
                         <i id="refreshIcon" class="fa-solid fa-rotate-right"></i>
                         <span class="ayn-input-icon">
-                            <input type="text" class="ayn-input ayn-input-rounded" (aynDelayedInput)="handleFilter($event)"
-                                (emptyInput)="handleFilterClear()" placeholder="Type name or id to filter" />
+                            <input type="text" class="ayn-input ayn-input-rounded"
+                                (aynDelayedInput)="handleFilter($event)" (emptyInput)="handleFilterClear()"
+                                placeholder="Type name or id to filter" />
                             <i class="fa-solid fa-search text-primary"></i>
                         </span>
 
@@ -63,7 +61,7 @@
                 <tr>
                     <th>Type</th>
                     <th>
-                        <ayn-checkbox></ayn-checkbox>
+                        <ayn-checkbox aynTableSelectAllInput></ayn-checkbox>
                     </th>
                     <th>Status</th>
                     <th>Name</th>
@@ -90,10 +88,11 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <ayn-checkbox></ayn-checkbox>
+                        <ayn-checkbox [aynTableSelectItemInput]="item"></ayn-checkbox>
                     </td>
                     <td class="text-center">
-                        <ayn-toggle-switch [(ngModel)]="item.isActive" [ngModelOptions]="{standalone: true}"></ayn-toggle-switch>
+                        <ayn-toggle-switch [(ngModel)]="item.isActive"
+                            [ngModelOptions]="{standalone: true}"></ayn-toggle-switch>
                     </td>
                     <td class="text-center">
                         {{item.name}}
@@ -136,12 +135,11 @@
                 <div class="ayn-toolbar">
                     <div class="ayn-toolbar-section ayn-toolbar-section-end">
                         <strong>List</strong>
-                        <ayn-table-pager-page-size-selector [(pageSize)]="tableStatus.pageSize"                         (pageSizeChange)="loadCampaigns()"
-                        ></ayn-table-pager-page-size-selector>
+                        <ayn-table-pager-page-size-selector [(pageSize)]="tableStatus.pageSize"
+                            (pageSizeChange)="loadCampaigns()"></ayn-table-pager-page-size-selector>
                     </div>
                 </div>
             </ng-container>
         </ayn-table>
-
     </div>
 </div>
