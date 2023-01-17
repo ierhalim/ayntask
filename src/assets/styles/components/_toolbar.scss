@@ -1,0 +1,21 @@
+@mixin ayn-toolbar-section-location($location) {
+    float: $location;
+    * {
+        margin-left: 11px;
+    }
+}
+.ayn-toolbar {
+    clear: both;
+    width: 100%;
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    .ayn-toolbar-section {
+        &.ayn-toolbar-section-right {
+           @include ayn-toolbar-section-location(right);
+        }
+        &.ayn-toolbar-section-left {
+        @include ayn-toolbar-section-location(left);
+        }
+    }
+}

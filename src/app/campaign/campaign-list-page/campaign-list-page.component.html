@@ -5,7 +5,29 @@
 
 <div class="ayn-panel">
     <div class="ayn-panel-header">
-        HEADER CONTENT
+
+        <div class="ayn-toolbar">
+            <div class="ayn-toolbar-section ayn-toolbar-section-left">
+                <button type="button">
+                    Campaigns
+                    <i class="fa-solid fa-rocket"></i>
+                </button>
+                <button type="button">
+                    Drafts
+                    <i class="fa-regular fa-floppy-disk"></i>
+                </button>    
+            </div>
+
+            <div class="ayn-toolbar-section ayn-toolbar-section-right">
+                <select [value]="-30">
+                    <option value="-3">Last 3 Day</option>
+                    <option value="-7">Last 7 Day</option>
+                    <option value="-30">Last 30 Day</option>
+                </select>
+            </div>
+
+        </div>
+   
     </div>
     <div class="ayn-panel-body">
         BODY CONTENT
