@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DataAccessModule } from './data-access/data-access.module';
+import { LoadingComponent } from './ui/loading/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { DataAccessModule } from './data-access/data-access.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DataAccessModule.forRoot()
+    DataAccessModule.forRoot(),
+    LoadingComponent
   ],
   //Work arround: Maybe there should be some kind of shared module would be good to declare our pipes and provide dependencies.
   providers: [CurrencyPipe],

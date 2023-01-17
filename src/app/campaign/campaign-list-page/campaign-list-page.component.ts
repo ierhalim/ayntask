@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { catchError, forkJoin, map, of } from 'rxjs';
 import { CampaignService } from '../../data-access/campaign-services/campaign.service';
 import { CampaignItemsModel, GetCampaignDataResultModel } from '../../data-access/campaign-services/models/get-campaign-data-result.model';
+import { LoadingService } from '../../ui/loading/loading.service';
 import { CampaignListPageModel, CampaignTableRowModel } from './models/campaign-list-page.model';
 
 @Component({
@@ -12,7 +13,8 @@ import { CampaignListPageModel, CampaignTableRowModel } from './models/campaign-
 export class CampaignListPageComponent implements OnInit {
 
   constructor(
-    private readonly campaignService: CampaignService
+    private readonly campaignService: CampaignService,
+    private readonly loadingService: LoadingService
   ) { }
 
 
@@ -78,17 +80,20 @@ export class CampaignListPageComponent implements OnInit {
   }
 
   handleItemActiveStatusChange(item: CampaignTableRowModel) {
+    this.loadingService.start();
     const sub = this.campaignService.updateCampaignStatus({
       newStatus: item.isActive ? 'ACTIVE' : 'PAUSED',
       campaignId: item.id
     }).subscribe({
       next: () => {
         // TODO: Validate with server value.
-        item.isActive = !item.isActive;
+        this.loadingService.stop();
       },
       error: (err) => {
         // TODO: Show error message
         console.error(err);
+        item.isActive = !item.isActive;
+        this.loadingService.stop();
         sub.unsubscribe();
       }
     });
@@ -103,6 +108,11 @@ export class CampaignListPageComponent implements OnInit {
   }
 
   private bulkStatusUpdate(campaigns: Array<CampaignTableRowModel>, newStatus: 'ACTIVE' | 'PAUSED') {
+    if (campaigns.length === 0) { 
+      // TODO: Show warning
+      return;
+    }
+    this.loadingService.start();
     const observables = campaigns.map(campaign => {
       return this.campaignService.updateCampaignStatus({ newStatus: newStatus, campaignId: campaign.id })
         .pipe(catchError((err) => {
@@ -114,10 +124,12 @@ export class CampaignListPageComponent implements OnInit {
       next: () => {
         // TODO: Filter failed reuqests add message about it.
         this.selectedCampaigns.forEach((campaign: CampaignTableRowModel) => { campaign.isActive = (newStatus === 'ACTIVE') });
+        this.loadingService.stop();
       },
       error: () => {
+        this.loadingService.stop();
         sub.unsubscribe();
-      }
+      },
     });
   }
 
