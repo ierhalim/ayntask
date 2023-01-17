@@ -7,7 +7,7 @@ import { TablePagerDirective } from '../table-pager.directive';
       <span class="pager-navigator">
         <button 
               type="button" 
-              class="ayn-button ayn-button-sm pager-navigator-button ayn-button-outline pager-navigator-button-prev"
+              class="ayn-button pager-navigator-button ayn-button-outline pager-navigator-button-prev"
               [ngClass]="{'ayn-button-primary': tablePager.prevPageAvaible, 'ayn-button-default': !tablePager.prevPageAvaible}"
               (click)="handlePrevPageClick()"
               >
@@ -15,7 +15,7 @@ import { TablePagerDirective } from '../table-pager.directive';
         </button>
         <button 
           type="button" 
-          class="ayn-button ayn-button-sm pager-navigator-button pager-navigator-button-next ayn-button-outline"
+          class="ayn-button  pager-navigator-button pager-navigator-button-next ayn-button-outline"
           [ngClass]="{'ayn-button-primary': tablePager.nextPageAvaible, 'ayn-button-default': !tablePager.nextPageAvaible}"
           (click)="handleNextPageClick()"
           >
