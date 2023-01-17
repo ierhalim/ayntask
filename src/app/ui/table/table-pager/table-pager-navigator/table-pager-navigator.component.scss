@@ -4,12 +4,12 @@
     border:1px solid $color-default;
     padding:5px;
     border-radius: 16px;
-    height: 51px;
+    display: table-cell;
 }
 
 .pager-navigator-button {
-    padding: 10px;
     height: 46px;
+    text-align: center;
     &.pager-navigator-button-prev {
         border-top-left-radius: 16px;
         border-bottom-left-radius: 16px;
