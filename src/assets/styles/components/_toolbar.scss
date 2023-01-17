@@ -11,10 +11,10 @@
     margin-top: 15px;
     margin-bottom: 15px;
     .ayn-toolbar-section {
-        &.ayn-toolbar-section-right {
+        &.ayn-toolbar-section-end {
            @include ayn-toolbar-section-location(right);
         }
-        &.ayn-toolbar-section-left {
+        &.ayn-toolbar-section-start {
         @include ayn-toolbar-section-location(left);
         }
     }

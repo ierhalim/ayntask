@@ -1,0 +1,55 @@
+@import '../theme';
+
+@mixin ayn-button-colored($bgColor, $textColor) {
+    background-color: $bgColor;
+    color: $textColor;
+}
+
+
+@mixin ayn-button-outline-colors(){
+    &.ayn-button-warning {
+        color: $color-warning;
+    }
+    &.ayn-button-success {
+        color: $color-success;
+    }
+    &.ayn-button-primary{
+        color: $color-primary;
+    }
+}
+
+
+.ayn-button {
+    font-family: "Poppins", sans-serif;
+    border: none;
+    cursor: pointer;
+    font-weight: 400;
+    line-height: 32px;
+    font-size: 16px;
+    height: 56px;
+    // Each button in the design had diffrent padding sizes (for each direaction), instead of checking each one, giving the avg padding value.
+    padding: 0 18px;
+
+    i {
+        margin-left: 11px;
+        font-size: 25px;
+    }
+
+    &.ayn-button-rounded {
+        border-radius: 20px;
+    }
+
+    &.ayn-button-fancy {
+        background: linear-gradient(90deg,
+                #00b1ff 0.00%,
+                #6437fc 100.00%);
+        color: white;
+    }
+
+    &.ayn-button-outline {
+        border: 1px solid $color-default;
+        background-color: transparent;
+
+        @include ayn-button-outline-colors();
+    }
+}
