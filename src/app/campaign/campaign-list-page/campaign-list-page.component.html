@@ -83,7 +83,7 @@
                         <ayn-checkbox></ayn-checkbox>
                     </td>
                     <td class="text-center">
-                        TOGGLE SWITCH
+                        <ayn-toggle-switch [(ngModel)]="item.isActive" [ngModelOptions]="{standalone: true}"></ayn-toggle-switch>
                     </td>
                     <td class="text-center">
                         {{item.name}}
