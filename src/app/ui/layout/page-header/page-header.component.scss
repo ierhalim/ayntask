@@ -1,0 +1,33 @@
+
+.page-header {
+    position: relative;
+
+    &::before {
+        width: 25px;
+        height: 50px;
+        background-color: #E5EBF1;
+        content: ' ';
+        border-radius: 0 15px 15px 0;
+        float: left;
+    }
+}
+
+.main-header,
+.sub-header {
+    margin-left: 51px;
+}
+.main-header {
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 32px;
+    font-style: normal;
+    text-align: left;
+    color: #00B1FF;
+}
+
+.sub-header {
+    color: #6884A9;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+}
