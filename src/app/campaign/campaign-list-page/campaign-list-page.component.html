@@ -43,7 +43,17 @@
                     <i class="fa-solid fa-pause"></i>
                 </button>
             </div>
-            <div class="ayn-toolbar-section ayn-toolbar-section-end"></div>
+            <div class="ayn-toolbar-section ayn-toolbar-section-end">
+                <i id="refreshIcon" class="fa-solid fa-rotate-right"></i>
+                <span class="ayn-input-icon">
+                    <input type="text" class="ayn-input ayn-input-rounded"
+                        (aynDelayedInput)="handleFilter($event)"
+                        (emptyInput)="handleFilterClear()"
+                        placeholder="Type name or id to filter" />
+                    <i class="fa-solid fa-search text-primary"></i>
+                </span>
+
+            </div>
         </div>
     </div>
 </div>

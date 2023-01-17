@@ -1,0 +1,24 @@
+@import '../theme';
+.ayn-input {
+    // Width should be 100%, input should be define at a container that has a width.
+    width: 276px;
+    height: 56px;
+    border-radius: 20px;
+    border: 1px solid $color-default;
+    outline: none;
+    padding: 0 22px;
+}
+
+.ayn-input-icon {
+    position: relative;
+    .ayn-input{
+        padding-right: 40px;
+    }
+    i {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+    }
+}

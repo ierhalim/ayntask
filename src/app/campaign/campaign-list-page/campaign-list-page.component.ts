@@ -12,4 +12,13 @@ export class CampaignListPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  handleFilter(filterValue: string) {
+    console.log(filterValue);
+  }
+
+  handleFilterClear() {
+    // TODO: Filter is removed, send a new request.
+  }
+
 }
