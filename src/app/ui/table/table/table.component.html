@@ -1,0 +1,15 @@
+<div class="table-container">
+    <table class="ayn-table">
+        <thead>
+            <ng-content select="[tableHead]"></ng-content>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let item of value">
+                <ng-container [ngTemplateOutlet]="itemTemplate" [ngTemplateOutletContext]="{item}"></ng-container>
+            </ng-container>
+            <ng-container *ngIf="value?.length === 0">
+                <ng-content select="[noDataMessage]"></ng-content>
+            </ng-container>
+        </tbody>
+    </table>
+</div>

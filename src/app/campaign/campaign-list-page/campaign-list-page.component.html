@@ -46,14 +46,85 @@
             <div class="ayn-toolbar-section ayn-toolbar-section-end">
                 <i id="refreshIcon" class="fa-solid fa-rotate-right"></i>
                 <span class="ayn-input-icon">
-                    <input type="text" class="ayn-input ayn-input-rounded"
-                        (aynDelayedInput)="handleFilter($event)"
-                        (emptyInput)="handleFilterClear()"
-                        placeholder="Type name or id to filter" />
+                    <input type="text" class="ayn-input ayn-input-rounded" (aynDelayedInput)="handleFilter($event)"
+                        (emptyInput)="handleFilterClear()" placeholder="Type name or id to filter" />
                     <i class="fa-solid fa-search text-primary"></i>
                 </span>
-
             </div>
         </div>
+
+        <ayn-table [value]="[1]">
+            <ng-container tableHead>
+                <tr>
+                    <th>Type</th>
+                    <th>
+                        Select All Checkbox
+                    </th>
+                    <th>Status</th>
+                    <th>Name</th>
+                    <th>Details</th>
+                    <th>Budget</th>
+                    <th>Start/End Date</th>
+                    <th>Result</th>
+                    <th>Impression</th>
+                    <th>Clicks</th>
+                    <th>CPC</th>
+                    <th>Spend</th>
+                    <th>
+                        <i class="fa-solid fa-pen"></i>
+                    </th>
+                </tr>
+            </ng-container>
+
+            <ng-template let-item>
+                <tr>
+                    <td>
+                            <i class="fa-solid fa-angle-right"></i>
+                            Campaign
+                    </td>
+                    <td class="text-center">
+                        Select Item
+                    </td>
+                    <td class="text-center">
+                        TOGGLE SWITCH
+                    </td>
+                    <td class="text-center">
+                        NAME
+                    </td>
+                    <td class="text-center">
+                        DETAIL BUTTON
+                    </td>
+                    <td class="text-center">
+                        <div>
+                            BUDGET
+                        </div>
+                        <div>BUDGET TYPE</div>
+                    </td>
+                    <td class="text-center">
+                        <div>START</div>
+                        <div>END</div>
+                    </td>
+                    <td class="text-center">
+                        RESULT
+                    </td>
+                    <td class="text-center">
+                        IMPRESSION
+                    </td>
+                    <td class="text-center">
+                        CLICKS
+                    </td>
+                    <td class="text-center">
+                        CPC
+                    </td>
+                    <td class="text-center">
+                        SPEND </td>
+                    <td class="text-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </td>
+                </tr>
+            </ng-template>
+
+        </ayn-table>
+
     </div>
 </div>

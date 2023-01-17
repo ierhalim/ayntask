@@ -1,0 +1,45 @@
+@import  '/src/assets/styles/theme';
+
+@mixin table-border() {
+    border: 0;
+    border-left: 1px;
+    border-style: solid;
+}
+
+.table-container {
+    border-color:  $color-default;
+    border-radius: 20px;
+    border: 1px solid $color-default;
+    padding: 21px 11px;
+}
+
+::ng-deep {
+    .ayn-table {
+        width: 100%;
+        border-spacing: 0 5px;
+        th {
+            @include table-border();
+            border-color: white;
+            background-color: #f2f5f8;
+            color: #42516b;
+            line-height: 32px;
+            &:first-of-type{
+                margin-left: -21px;
+            }
+        }
+        td {
+            @include table-border();
+            border: 1px solid  $color-default;
+            margin-bottom: 5px;
+            &:first-of-type{
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+            }
+            &:last-of-type{
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
+        }
+
+    }
+}
